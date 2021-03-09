@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Recursive', sans-serif;
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(100deg, rgba(160, 160, 34, 0.5), rgba(101, 101, 220, 0.5));
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: white;
+    
+}
+
+form button {
+    cursor: pointer;
+    color:rgba(101, 101, 220, 0.5);
+    padding: 0rem 0.5rem;
+
+    transition: all 0.4s ease;
+   
+}
+
+form button:hover {
+   background: rgba(101, 101, 220, 0.5);
+   color: white; 
+   
+}
+
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    width: 35%;
+}
+
+.todo {
+    background: white;
+    margin: 1rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+
+    transition: all 0.5s ease;
+    
+}
+
+.todo li {
+    padding: 0.5rem 1rem;
+}
+
+.todo-item {
+    flex: 1;
+}
+
+.complete-btn,
+.trash-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    background: rgba(3, 3, 100, 0.5);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: rgba(10, 179, 52, 0.5);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.anim-delete {
+    transform: translateY(-10rem) rotateZ(45deg);
+    opacity: 0;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: rgba(101, 101, 220, 0.8);
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background: rgba(3, 3, 100, 0.5);
+    padding: 0.7rem;
+
+}
+
+.select:hover::after {
+    background: white;
+    color: rgba(3, 3, 100, 0.5)
+}
+
+
+
